@@ -36,7 +36,6 @@ contract NFTokenMetadataMock is
   function mint(
     address _to,
     uint256 _tokenId,
-    //string calldata _imageHash,
     string calldata _textualContent,
     string calldata _uri
   )
