@@ -11,9 +11,6 @@ contract NFTokenMetadataMock is
   NFTokenMetadata,
   Ownable
 {
-
-  //mapping (uint256 => string) internal imageHashMap;
-
   event textualContentLog(uint indexed _tokenId, string content);
 
   /**
@@ -29,13 +26,6 @@ contract NFTokenMetadataMock is
     nftName = _name;
     nftSymbol = _symbol;
   }
-
-  /*
-  function getImageHash(uint256 _tokenId) view external returns (string memory)
-  {
-    return imageHashMap[_tokenId];
-  }
-  */
 
   /**
    * @dev Mints a new NFT.
@@ -56,7 +46,6 @@ contract NFTokenMetadataMock is
     super._mint(_to, _tokenId);
     super._setTokenUri(_tokenId, _uri);
 
-    //imageHashMap[_tokenId] = _imageHash;
     emit textualContentLog(_tokenId, _textualContent);
   }
 
